@@ -37,26 +37,34 @@ retern True if the node was removed successfully, else return False. if the node
 **def remove_edge(self, node_id1: int, node_id2: int) -> bool:** removes an edge from the graph.
 return True if the edge was removed successfully, else return False. If such an edge does not exists the function will do nothing
 
+
 _**GraphAlgo:**_
-def get_graph(self) -> GraphInterface: return the directed graph on which the algorithm works on.
-def shortest_path(self, id1: int, id2: int) -> (float, list): check the shortest path from node id1 to node id2 using Dijkstra's Algorithm.
-    this method save the father to each node and in this way save a path of nodes between id1 and id2.
-        return the distance of the path, a list of the nodes ids that the path goes through.
-        if there is no path between id1 and id2, or one of them dose not exist the function returns (float('inf'),[]).
- def connected_component(self, id1: int) -> list: finds the Strongly Connected Component(SCC) that node id1 is a part of. This method based on BFS Algorithm.
-        the method get a node id and find his SCC.
-        in order to do this, we check which nodes id1 can arrive, and after this, we check the nodes that can arrive to id1.
-        Finally, we compare between the 2 lists and We return the common nodes.
-        return a list of nodes in the SCC.
-        if the graph is None or id1 is not in the graph, the function should return an empty list [].
- def connected_components(self) -> List[list]: finds all the Strongly Connected Component(SCC) in the graph.
-        this method pass all the nodes in the graph and find the SCC for each node. this method use connected_component.
-        return The list[list] for all SCC in the graph. if the graph is None the function should return an empty list []      
-def load_from_json(self, file_name: str) -> bool: loads a graph from a json file. 
-       return True if the loading was successful, else return False.
-def save_to_json(self, file_name: str) -> bool: saves the graph in JSON format to a file
-       return True if the save was successful, else return False.
-def plot_graph(self) -> None: plots the graph.
-       if the nodes have a position, the nodes will be placed there. Otherwise, they will be placed in a random but elegant manner.
+
+**def get_graph(self) -> GraphInterface:** return the directed graph on which the algorithm works on.
+
+**def shortest_path(self, id1: int, id2: int) -> (float, list):** check the shortest path from node id1 to node id2 using Dijkstra's Algorithm.
+  this method save the father to each node and in this way save a path of nodes between id1 and id2.
+  return the distance of the path, a list of the nodes ids that the path goes through.
+  if there is no path between id1 and id2, or one of them dose not exist the function returns (float('inf'),[]).
+  
+**def connected_component(self, id1: int) -> list:** finds the Strongly Connected Component(SCC) that node id1 is a part of. This method based on BFS Algorithm.
+the method get a node id and find his SCC.
+in order to do this, we check which nodes id1 can arrive, and after this, we check the nodes that can arrive to id1.
+Finally, we compare between the 2 lists and We return the common nodes.
+return a list of nodes in the SCC.
+if the graph is None or id1 is not in the graph, the function should return an empty list [].
+
+ **def connected_components(self) -> List[list]:** finds all the Strongly Connected Component(SCC) in the graph.
+ this method pass all the nodes in the graph and find the SCC for each node. this method use connected_component.
+ return The list[list] for all SCC in the graph. if the graph is None the function should return an empty list [].    
+        
+**def load_from_json(self, file_name: str) -> bool:** loads a graph from a json file. 
+  return True if the loading was successful, else return False.
+  
+**def save_to_json(self, file_name: str) -> bool:** saves the graph in JSON format to a file
+ return True if the save was successful, else return False.
+ 
+**def plot_graph(self) -> None:** plots the graph.
+  if the nodes have a position, the nodes will be placed there. Otherwise, they will be placed in a random but elegant manner.
 
 
