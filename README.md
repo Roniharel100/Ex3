@@ -42,6 +42,11 @@ def shortest_path(self, id1: int, id2: int) -> (float, list): check the shortest
  def connected_components(self) -> List[list]: finds all the Strongly Connected Component(SCC) in the graph.
         this method pass all the nodes in the graph and find the SCC for each node. this method use connected_component.
         return The list[list] for all SCC in the graph. if the graph is None the function should return an empty list []      
-
+def load_from_json(self, file_name: str) -> bool: loads a graph from a json file. 
+       return True if the loading was successful, else return False.
+def save_to_json(self, file_name: str) -> bool: saves the graph in JSON format to a file
+       return True if the save was successful, else return False.
+def plot_graph(self) -> None: plots the graph.
+       if the nodes have a position, the nodes will be placed there. Otherwise, they will be placed in a random but elegant manner.
 
 
