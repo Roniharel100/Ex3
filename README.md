@@ -14,19 +14,28 @@ GraphAlgo.py implement GraphAlgoInterface - in this class we holds a directed we
 _**DiGraph:**_
 
 **def v_size(self) -> int:** returns the number of nodes in the graph.
-def e_size(self) -> int: returns the number of edges in the graph.
-def get_all_v(self) -> dict: return a dictionary of all the nodes in the Graph. 
-def all_in_edges_of_node(self, id1: int) -> dict: return a dictionary of all the nodes connected to (into) id1.
-def all_out_edges_of_node(self, id1: int) -> dict: return a dictionary of all the nodes connected from id1.
-def get_mc(self) -> int: returns the current version of this graph, Mode Count - for testing changes in the graph.
-def add_edge(self, id1: int, id2: int, weight: float) -> bool: adds an edge to the graph. 
-  True if the edge was added successfully, else return False. if the edge already exists or one of the nodes dose not exists the functions will do nothing.
-def add_node(self, node_id: int, pos: tuple = None) -> bool: adds a node to the graph.
-  return True if the node was added successfully, else return False. if the node id already exists the node will not be added.
-def remove_node(self, node_id: int) -> bool: removes a node from the graph.
-  retern True if the node was removed successfully, else return False. if the node id does not exists the function will do nothing.
-def remove_edge(self, node_id1: int, node_id2: int) -> bool: removes an edge from the graph.
-            return True if the edge was removed successfully, else return False. If such an edge does not exists the function will do nothing
+
+**def e_size(self) -> int:** returns the number of edges in the graph.
+
+**def get_all_v(self) -> dict:** return a dictionary of all the nodes in the Graph. 
+
+**def all_in_edges_of_node(self, id1: int) -> dict:** return a dictionary of all the nodes connected to (into) id1.
+
+**def all_out_edges_of_node(self, id1: int) -> dict:** return a dictionary of all the nodes connected from id1.
+
+**def get_mc(self) -> int:** returns the current version of this graph, Mode Count - for testing changes in the graph.
+
+**def add_edge(self, id1: int, id2: int, weight: float) -> bool:** adds an edge to the graph. 
+return True if the edge was added successfully, else return False. if the edge already exists or one of the nodes dose not exists the functions will do nothing.
+
+**def add_node(self, node_id: int, pos: tuple = None) -> bool:** adds a node to the graph.
+return True if the node was added successfully, else return False. if the node id already exists the node will not be added.
+  
+**def remove_node(self, node_id: int) -> bool:** removes a node from the graph.
+retern True if the node was removed successfully, else return False. if the node id does not exists the function will do nothing.
+  
+**def remove_edge(self, node_id1: int, node_id2: int) -> bool:** removes an edge from the graph.
+return True if the edge was removed successfully, else return False. If such an edge does not exists the function will do nothing
 
 _**GraphAlgo:**_
 def get_graph(self) -> GraphInterface: return the directed graph on which the algorithm works on.
