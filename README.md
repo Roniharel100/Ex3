@@ -1,6 +1,6 @@
 _EX3_
-
- ### Introduction: 
+### _Introduction_:
+ 
 
 **This project presents a directed weighted graph. 
 The goal of this project is to implement a directional weighted graph using python.
@@ -12,7 +12,8 @@ GraphAlgo.py implement GraphAlgoInterface - in this class we holds a directed we
 
 ### Project functions:
 _**DiGraph:**_
-def v_size(self) -> int: returns the number of nodes in the graph.
+
+**def v_size(self) -> int:** returns the number of nodes in the graph.
 def e_size(self) -> int: returns the number of edges in the graph.
 def get_all_v(self) -> dict: return a dictionary of all the nodes in the Graph. 
 def all_in_edges_of_node(self, id1: int) -> dict: return a dictionary of all the nodes connected to (into) id1.
