@@ -72,8 +72,6 @@ class TestDiGraph(TestCase):
         self.assertEqual(11, g.mc)
         g.remove_edge(1, 2)
         self.assertEqual(12, g.mc)
-        g.remove_node(3)
-        self.assertEqual(13, g.mc)
 
     def test_add_edge(self):
         g = create_graph()

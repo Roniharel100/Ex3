@@ -57,9 +57,6 @@ class GraphAlgo(GraphAlgoInterface):
         @return: The distance of the path, a list of the nodes ids that the path goes through
         if there is no path between id1 and id2, or one of them dose not exist the function returns (float('inf'),[])"""
 
-        if id1 == id2:
-            return 0, [id1]
-
         if self.graph is None:
             return math.inf, []
 
@@ -67,6 +64,9 @@ class GraphAlgo(GraphAlgoInterface):
 
         if (graph_nodes.get(id1) is None) or (graph_nodes.get(id2) is None):
             return math.inf, []
+
+        if id1 == id2:
+            return 0, [id1]
 
         # Dijkstra method
         parent_map = {}
@@ -161,7 +161,7 @@ class GraphAlgo(GraphAlgoInterface):
             return []
 
         graph_nodes = self.graph.get_all_v()
-        if graph_nodes[id1] is None:
+        if id1 not in graph_nodes:
             return []
 
         answer_list = []
